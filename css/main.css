@@ -1,0 +1,27 @@
+html { 
+  background: url(../images/rmnp.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*overrride BS CSS*/
+body {
+  font-family:'Roboto',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: transparent;
+  color: #fff;
+}
+a {
+	color: #fff;
+}
+a:hover{
+	background-color: transparent;
+}
+/*header*/
+.zl{
+	text-align: center;
+    border-style: solid;
+    outline: none;
+    width: 40%;
+    float: none; margin: 0 auto;
+  }
