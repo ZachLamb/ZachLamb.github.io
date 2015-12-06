@@ -4,6 +4,10 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear; /* Firefox 4 */
+  -webkit-transition: background 0.5s linear; /* Safari and Chrome */
+  -o-transition: background 0.5s linear; /* Opera */
 }
 /*overrride BS CSS*/
 body {
@@ -25,3 +29,18 @@ a:hover{
     width: 40%;
     float: none; margin: 0 auto;
   }
+/*profile pic*/
+.person{
+	width: 25%;
+	height: 25%;
+}
+.video{
+	border: 0px;
+	float: none;
+}
+.about{
+	padding: 65px;
+}
+.projects{
+	padding: 65px;
+}
