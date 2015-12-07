@@ -28,11 +28,13 @@ a:hover{
     outline: none;
     width: 40%;
     float: none; margin: 0 auto;
+    padding: 20px;
   }
 /*profile pic*/
 .person{
 	width: 25%;
 	height: 25%;
+	padding: 20px;
 }
 .video{
 	border: 0px;
