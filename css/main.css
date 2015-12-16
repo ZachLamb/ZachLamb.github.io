@@ -21,6 +21,14 @@ a {
 a:hover{
 	background-color: transparent;
 }
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
 /*header*/
 .zl{
 	text-align: center;
@@ -32,13 +40,12 @@ a:hover{
   }
 /*profile pic*/
 .person{
-	width: 25%;
+	width: 50%;
 	height: 25%;
 	padding: 20px;
 }
 .video{
 	border: 0px;
-	float: none;
 }
 .about{
 	padding: 65px;
