@@ -29,6 +29,15 @@ a:hover{
 .navbar-inverse .navbar-brand {
     color: #fff;
 }
+.btn {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #fff;
+    cursor:pointer;
+    overflow: hidden;
+    color: #fff;
+}
+
 /*header*/
 .zl{
 	text-align: center;
