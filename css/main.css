@@ -29,6 +29,12 @@ a:hover{
 .navbar-inverse .navbar-brand {
     color: #fff;
 }
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #C0C0C0;
+}
 .btn {
     background-color: Transparent;
     background-repeat:no-repeat;
