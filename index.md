@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: material
 header: Zachary Lamb
 title: Designer, Developer, and Spanish Speaker
 ---
