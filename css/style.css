@@ -6,6 +6,15 @@
  * Made By MaterializeCSS.com
  */
 
+/*header*/
+.teal-text.text-lighten-2 {
+    color: #FFF !important;
+}
+.person{
+  width: 25%;
+  height: 25%;
+  padding: 20px;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
