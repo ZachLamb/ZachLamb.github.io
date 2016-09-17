@@ -1,0 +1,30 @@
+- name: Chick-Fil-A
+  location: Federal Heights,CO
+  title: Drive-Thru Leader
+  startDate: March 2012
+  endDate: February 2014
+  project: I loved this job because empathy is a natural trait that I have ,and Chick-Fil-A prides itself on its customer service. I started out as a dining room asistant. I worked hard to master that position no matter how tedious or tiring it became. My peers and managers noticed this ,and began promoting me after a month. A few months later I was promoted to be on the marketing team because of how I presented myself and the company. A year later, I was promoted to to a leadership position because I had proved that I got could delegate and train other employees. As Drive-Thru Leader, I motivated employees, improved business systems, and helped employees troubleshoot issues.
+- name: Office of IT
+  location: University of Colorado at Boulder
+  title: General Desktop Support Technician
+  startDate: February 2014
+  endDate: March 2015
+  project: After Chick-Fil-A, I wanted a job that was more technical ,and IT was a natural fit for me because I once again had the opportunity to listen and empathize with people in order to solve their computer problems. I troubleshooted issues such as problems with operating systems, removing viruses, and email issues to name a few. My customer service oriented mindset help me contribute to the team's overall customer satisfaction rating. My customer service oriented mindset help me contribute to the team's overall customer satisfaction rating. I troubleshooted basic desktop issues. I also did web development for the department.
+- name: Department of MCD Biology
+  location: University of Colorado at Boulder
+  title: Student Support Technician
+  startDate: September 2014
+  endDate: April 2016
+  project: OIT gave me wonderful opportunities to learn more about computers and problem solving ,but I wanted to pivot into web development. MCDB made that transition smooth for me since I was able to still do desktop support while learning web development with them. For website development, I made a lab website, made various changes to the main MCDB website ,and developed a web app with Django and MySQL to keep track of finances for the IT office. Along with learning Django, I learned a lot about HTML, CSS, and Git from these projects.
+- name: Gogo Business Aviation
+  location: Broomfield,CO
+  title: UI/UX Software Engineering Intern
+  startDate: May 2016
+  endDate: August 2016
+  project: I was hired in Summer 2016 to work on an Agile project team to do web development using the MEAN stack. I was given the opportunity to tackle whatever features I thought I could handle. At first, I did some smaller features and bug fixes on the product because I was still adjusting to my team both in culture and workflow. As I got to know my team better, I decided to take on bigger tasks because I wanted to grow as much as I could ,and I knew that my team would be able to teach me what I did not know.
+- name: Lab for Playful Computation
+  location: ATLAS Institute in the University of Colorado at Boulder
+  title: Assistant Researcher
+  startDate: September 2015
+  endDate: Current Date
+  project: This lab focuses on finding creative ways to teach kids Computer Science. The PI has recevied national and international attention to this because the lab is doing things that have not been done before. In my first at the lab, I made the lab website, designed inforgraphics to be shared with the general public, designed graphics to visualize data in NSF proposals, and I did onsite User Experience Research with middle schoolers for one of programming projects. Started August 2016, I have been learning User Experience Design traits in order to develop a new project website for the general public. I am also apart of the core team that is designing and researching new tools and curriculum for middle school Computer Science classes.
