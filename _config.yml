@@ -1,0 +1,6 @@
+name: "Zach Lamb"
+description: "Personal website to showcase some of my work"
+baseurl: "/website" # the subpath of your site
+url: "ZachLamb.github.io"
+
+markdown: kramdown
