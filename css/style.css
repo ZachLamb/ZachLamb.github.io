@@ -8,7 +8,6 @@
 
  /*override CSS active navbar color to black*/
 
-
 .person{
   width: 25%;
   height: 25%;
@@ -78,6 +77,14 @@ footer.page-footer {
   height: 300px
 }
 
+/*Override link color on projects page*/
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: #000;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+  color: #eceff1;
+}
 /*text fadein*/
 @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
