@@ -18,3 +18,11 @@
   photo: design.png
   description: Take a look at my first project that I used the UX design process to develop a new website.
   link: https://drive.google.com/open?id=0B-AMb7XVv6UpNmE0UXJ4cF9WSFE
+- name: Laser Cut Carousel
+  photo: design.png
+  description: I was apart of a group project that had to make some 3D object using a laser cutter. I came up with the idea of a carosel. It became a successful project because our group could easily split up parts. I designed the Ralphie parts as well as the ceiling and the edged logos.
+  link: https://drive.google.com/open?id=0B-AMb7XVv6UpMTl3X1hrQlV6R3M
+- name: Weather app
+  photo: code.png
+  description: I made a weather app that displays the weather of my top five favorite cities. The app uses ReactJS and NodeJS. The app is hosted on Firebase, it pulls in data realtime from a Firebase dataset, and it uses Google's material design.
+  link: https://hello-ucdd2016.firebaseapp.com/apps/resume/cities.html
