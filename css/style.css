@@ -105,6 +105,7 @@ footer.page-footer {
     animation-duration:1s;
 }
 #name{
+      margin-top: 77%;
       -webkit-animation-delay: 1.7s;
       -moz-animation-delay: 1.7s;
       animation-delay: 1.7s;
@@ -116,6 +117,7 @@ footer.page-footer {
 }
 .logo {
   opacity:0;  /* make things invisible upon start */
+  padding-top: 100px;
   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
@@ -131,4 +133,65 @@ footer.page-footer {
   -webkit-animation-delay: .5s;
   -moz-animation-delay: .5s;
   animation-delay: .5s;
+}
+
+#LeftCube{
+  -webkit-animation:moveRight 2s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:moveRight 2s;
+  animation:moveRight 2s;
+}
+@keyframes moveRight {
+
+0% {
+    -ms-transform: translate(-100px, -150px); /* IE 9 */
+    -webkit-transform: translate(-100px,-150px); /* Safari */
+    transform: translate(-100px,-150px);
+  }
+
+100% {
+    -ms-transform: translate(0px, 0px); /* IE 9 */
+    -webkit-transform: translate(0px,0px); /* Safari */
+    transform: translate(0px,0px);
+  }
+}
+#RightCube{
+  -webkit-animation:moveLeft 2s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:moveLeft 2s;
+  animation:moveLeft 2s;
+}
+@keyframes moveLeft {
+
+0% {
+    -ms-transform: translate(100px, -150px); /* IE 9 */
+    -webkit-transform: translate(100px,-150px); /* Safari */
+    transform: translate(100px,-150px);
+  }
+
+100% {
+    -ms-transform: translate(0px, 0px); /* IE 9 */
+    -webkit-transform: translate(0px,0px); /* Safari */
+    transform: translate(0px,0px);
+  }
+}
+#TopCube{
+  -webkit-animation:moveBottom 2s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:moveBottom 2s;
+  animation:moveBottom 2s;
+}
+@keyframes moveBottom {
+
+0% {
+    -ms-transform: translate(0px, -150px); /* IE 9 */
+    -webkit-transform: translate(0px,-150px); /* Safari */
+    transform: translate(0px,-150px);
+  }
+
+100% {
+    -ms-transform: translate(0px, 0px); /* IE 9 */
+    -webkit-transform: translate(0px,0px); /* Safari */
+    transform: translate(0px,0px);
+  }
+}
+.container{
+  margin-top: 5%;
 }
