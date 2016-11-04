@@ -1,3 +1,11 @@
+- name: Old Laboratory Website
+  photo: code.png
+  description: I developed the website for the William Old Laboratory when I worked in MCD Biology
+  link: http://mcdb.colorado.edu/labs/old/
+- name: LPC Website
+  photo: code.png
+  description: I developed the website for the Laboratory for Playful Computation
+  link: http://atlas.colorado.edu/lpc/
 - name: Creative Resume
   photo: design.png
   description: I was sending out applications to jobs with no luck of hearing back ,so I decided to redesign my resume to better reflect my design skills and usability skills.
@@ -26,7 +34,19 @@
   photo: code.png
   description: I made a weather app that displays the weather a cities. The app uses ReactJS and NodeJS. The app is hosted on Firebase, it pulls in data realtime from a Firebase dataset.
   link: https://hello-ucdd2016.firebaseapp.com/apps/resume/cities.html
+- name: Where's Ralphie? App
+  photo: code.png
+  description: I was a Front-End Developer on a team that made an app to track where CU Boulder's mascot, Ralphie, is.
+  link: https://hello-ucdd2016.firebaseapp.com/apps/uber/
 - name: Calendar App with Angular
   photo: code.png
-  description: I contributed to a calendar app that uses AngularJS 1 as part of a Object Oriented Design and Analysis class. I developed the login functionality as well as developing the user requirements.
+  description: I was a Front-End Developer for a calendar app that uses AngularJS. I developed the login functionality as well as the the user requirements.
   link: https://github.com/WarrenFerrell/CoCal
+- name: React Coloring Book
+  photo: code.png
+  description: I was the UX Design Lead and Front-End Lead for a small project that uses ReactJS, Firebase, and Webpack.
+  link: https://github.com/ZachLamb/react-color
+- name: React Coloring Book
+  photo: code.png
+  description: I was the UX Design Lead and Front-End Lead for a small project that uses ReactJS, Firebase, and Webpack.
+  link: https://github.com/ZachLamb/react-color
