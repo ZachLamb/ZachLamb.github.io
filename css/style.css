@@ -195,3 +195,15 @@ footer.page-footer {
 .container{
   margin-top: 5%;
 }
+
+.cls-1 {
+  font-size: 243px;
+  font-family: HelveticaNeue, Helvetica Neue;
+}
+.circle{
+  border-radius: 50%;
+  border: 5px solid black;
+}
+.topSpace{
+  padding-top: 100px;
+}
