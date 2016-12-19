@@ -3,7 +3,8 @@
     <div class="col push-s3"></div>
     <a href="{{site.baseurl}}/index.html" class="brand-logo logoSpace">Zach Lamb</a>
     <ul class="right hide-on-med-and-down">
-      {% for node in site.pages %}
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for node in sorted_pages %}
         {% if page.url == node.url %}
           <li class="active page-scroll"><a href="{{site.baseurl}}/{{node.url}}/" class="active">{{node.title}}</a></li>
         {% else %}
