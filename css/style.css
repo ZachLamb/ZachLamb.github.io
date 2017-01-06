@@ -204,6 +204,13 @@ footer.page-footer {
   border-radius: 50%;
   border: 5px solid black;
 }
+.circleText{
+  border-radius: 50%;
+  border: 5px solid black;
+  width: 325px;
+  height: 325px;
+  padding-top: 121px;
+}
 .topSpace{
   padding-top: 100px;
 }
