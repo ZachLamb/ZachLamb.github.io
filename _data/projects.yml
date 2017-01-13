@@ -3,50 +3,61 @@
   description: I developed the website for the William Old Laboratory when I worked in MCD Biology
   link: http://mcdb.colorado.edu/labs/old/
 - name: LPC Website
-  photo: code.png
+  photo: projects/lpcWebsite.png
   description: I developed the website for the Laboratory for Playful Computation
   link: http://atlas.colorado.edu/lpc/
 - name: Creative Resume
-  photo: design.png
+  photo: projects/creativeResume.png
   description: I was sending out applications to jobs with no luck of hearing back ,so I decided to redesign my resume to better reflect my design skills and usability skills.
   link: https://www.dropbox.com/s/m9gqdme9qdc3q7k/resumeZachLamb.pdf?dl=0/
 - name: Flyer for Research Lab
-  photo: design.png
+  photo: projects/btFlyer.png
   description: I was tasked with creating an graphic flyer to showcase the research lab that I work in. The flyer reflect two traits of the lab which are artistic and technical
   link: https://www.dropbox.com/s/1yt33gp4c6utsz7/BlockyTalkyFlyer.pdf?dl=0
 - name: Film Noire Intro
-  photo: media.png
+  photo: projects/filmNoire.png
   description: Created film noire (old school horror movie) intro sequence
   link: https://drive.google.com/file/d/0B3p_-WWX0UZSMTI2VlBYZm5FVVk/view?usp=sharing
 - name: Video Promo for Gogo
-  photo: media.png
+  photo: projects/gogoVideo.png
   description: I took initiative to be the project lead and sole animation editor with other interns to make a video promo on the internship program at Gogo Business Aviation.
   link: https://drive.google.com/open?id=0B3p_-WWX0UZSS29qS3YxU3VJSU0
 - name: Infographic
-  photo: design.png
+  photo: projects/infographic.png
   description: I made an infographic based off of what I learned in a graphic design class
   link: https://drive.google.com/open?id=0B-AMb7XVv6UpM2RKSTdBWkdvV00
 - name: Design Process for Website
-  photo: design.png
+  photo: projects/newWebsite.png
   description: Take a look at my first project that I used the UX design process to develop a new website.
   link: https://drive.google.com/open?id=0B-AMb7XVv6UpNmE0UXJ4cF9WSFE
 - name: Laser Cut Carousel
-  photo: design.png
+  photo: projects/laserCut.png
   description: This is a 3D model of a carousel made with a laser cutter. I designed the Ralphie parts as well as the ceiling and the edged logos for this group project.
   link: https://drive.google.com/open?id=0B-AMb7XVv6UpMTl3X1hrQlV6R3M
 - name: Weather app
-  photo: code.png
+  photo: projects/weatherApp.png
   description: I made a weather app that displays the weather a cities. The app uses ReactJS and NodeJS. The app is hosted on Firebase, it pulls in data realtime from a Firebase dataset.
   link: https://hello-ucdd2016.firebaseapp.com/apps/resume/cities.html
 - name: Where's Ralphie? App
-  photo: code.png
+  photo: projects/wheresChip.png
   description: I was a Front-End Developer on a team that made an app to track where CU Boulder's mascot, Ralphie, is.
   link: https://hello-ucdd2016.firebaseapp.com/apps/uber/
 - name: Calendar App with Angular
-  photo: code.png
+  photo: projects/calendarApp.png
   description: I was a Front-End Developer for a calendar app that uses AngularJS. I developed the login functionality as well as the the user requirements.
   link: https://github.com/WarrenFerrell/CoCal
 - name: React Coloring Book
-  photo: code.png
-  description: I was the UX Design Lead and Front-End Lead for a small project that uses ReactJS, Firebase, and Webpack.
+  photo: projects/coloringBook.png
+  description: I am the UX Design Lead and Front-End Lead for a small project that uses ReactJS, Firebase, and Webpack.
   link: https://github.com/ZachLamb/react-color
+- name: Safe Spot
+  photo: projects/safeSpot.png
+  description: At a hackathon, my team made an app that shows inclusive businesses around a user.
+  link: https://kmegoryc.github.io/SafeSpot/
+- name: Shell Game for iOS
+  photo: projects/shellGame.png
+  description: I made a Shell Game in iOS. I learned how to use Swift and XCode through this.
+- name: Hackathon Flyer
+  photo: projects/creativePlus.png
+  description: Created flyer with Illustrator. Learned how to create a brush (used for rope) and how to use the flag distort.
+  link: https://www.dropbox.com/s/4s43jueozg9xqtq/creativeDesign.pdf?dl=0
