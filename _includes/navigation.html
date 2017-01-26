@@ -16,15 +16,15 @@
       {% for node in site.pages %}
         {% if page.url == node.url %}
           {% if node.url ==  '/' %}
-            <li class="active page-scroll"><a href="{{site.baseurl}}{{node.url}}/" class="active">Home</a></li>
+            <li class="active page-scroll"><a href="{{site.baseurl}}{{node.url}}" class="active">Home</a></li>
           {% else %}
-            <li class="active page-scroll"><a href="{{site.baseurl}}{{node.url}}/" class="active">{{node.title}}</a></li>
+            <li class="active page-scroll"><a href="{{site.baseurl}}{{node.url}}" class="active">{{node.title}}</a></li>
           {% endif %}
         {% else %}
         {% if node.url ==  '/' %}
-          <li class="page-scroll"><a href="{{site.baseurl}}{{node.url}}/">Home</a></li>
+          <li class="page-scroll"><a href="{{site.baseurl}}{{node.url}}">Home</a></li>
         {% else %}
-          <li class="page-scroll"><a href="{{site.baseurl}}{{node.url}}/">{{node.title}}</a></li>
+          <li class="page-scroll"><a href="{{site.baseurl}}{{node.url}}">{{node.title}}</a></li>
         {% endif %}
         {% endif %}
       {% endfor %}
