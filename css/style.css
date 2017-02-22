@@ -214,3 +214,12 @@ footer.page-footer {
 .topSpace{
   padding-top: 100px;
 }
+
+/*sendgrid css*/
+rect {
+  cursor: pointer;
+  stroke-width: 2;
+}
+rect.disabled {
+  fill: transparent !important;
+}
