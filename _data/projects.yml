@@ -61,3 +61,19 @@
   photo: projects/creativePlus.png
   description: Created flyer with Illustrator. Learned how to create a brush (used for rope) and how to use the flag distort.
   link: https://www.dropbox.com/s/4s43jueozg9xqtq/creativeDesign.pdf?dl=0
+- name: Wing Animations
+  photo: projects/wings.png
+  description: Designed animations of wing flappings from an artists rendition of wings.
+  link: https://zachl.myportfolio.com/wing-animations-for-whatliftsyou-app
+- name: New Logo for LPC
+  photo: projects/lpcLogo.png
+  description: I recreated the logo for the Laboratory for Playful Computation,LPC.
+  link: https://zachl.myportfolio.com/lpc-logo
+- name: BlockyTalky Web Resource
+  photo: projects/btNewSite.png
+  description: Built a site for the Laboratory for Playful Computation from design to development.
+  link: https://zachl.myportfolio.com/blockytalky-resource-website
+- name: Minigolf Scene
+  photo: projects/minigolf.png
+  description: In a Computer Graphics class, I made a minigolf scene in C.
+  link: https://github.com/ZachLamb/MinigolfSim
