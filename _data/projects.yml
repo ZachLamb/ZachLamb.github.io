@@ -57,6 +57,7 @@
 - name: Shell Game for iOS
   photo: projects/shellGame.png
   description: I made a Shell Game in iOS. I learned how to use Swift and XCode through this.
+  link: https://github.com/ZachLamb/MobileDevelopment/tree/master/Project%20Three/m3
 - name: Hackathon Flyer
   photo: projects/creativePlus.png
   description: Created flyer with Illustrator. Learned how to create a brush (used for rope) and how to use the flag distort.
