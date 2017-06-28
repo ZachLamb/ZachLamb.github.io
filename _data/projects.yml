@@ -78,7 +78,7 @@
   photo: projects/minigolf.png
   description: In a Computer Graphics class, I made a minigolf scene in C.
   link: https://github.com/ZachLamb/MinigolfSim
-- name: Angel Wings, medical supply delivery drone
+- name: Angel Wings, iOS App
   photo: projects/angelWings.png
-  description: Conducted user research and designed app concept.
+  description: Angel Wings is a medical supplies delivery drone.
   link: https://zachl.myportfolio.com/angel-wings
