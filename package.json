@@ -13,9 +13,20 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "core-js": "^2.6.5",
     "gatsby": "^2.1.4",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-material-ui": "^1.2.4",
+    "gatsby-plugin-sass": "^2.0.10",
+    "gatsby-plugin-sharp": "^2.2.7",
+    "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-transformer-sharp": "^2.2.3",
+    "node-sass": "^4.11.0",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-grand-view": "^0.16.19"
   },
   "repository": {
     "type": "git",

@@ -1,25 +1,60 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+import Grid from "@material-ui/core/Grid";
+import Avatar from "@material-ui/core/Avatar";
+import { Paper, Drawer } from "@material-ui/core";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+
+import "../styles/main.scss";
 
 export default ({ children }) => (
-  <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>Zach Lamb</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-        <ListLink to="/experience/">Experience</ListLink>
-        <ListLink to="/about/">About</ListLink>
-      </ul>
-    </header>
-    {children}
+  <div>
+    <Grid container direction="row" justify="center" alignItems="center">
+      <Grid item lg={3}>
+        <Drawer variant="permanent">
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item lg={3}>
+              <Avatar
+                alt="Zach Lamb"
+                src="src/images/zachlamb.jpg"
+                className="image-avatar"
+              />
+            </Grid>
+            <Grid item lg={9}>
+              <List>
+                {[
+                  "Elevator Speech",
+                  "Skills",
+                  "Experience",
+                  "About",
+                  "Contact"
+                ].map((text, index) => (
+                  <ListItem button key={text}>
+                    <ListItemText primary={text} />
+                  </ListItem>
+                ))}
+              </List>
+            </Grid>
+          </Grid>
+        </Drawer>
+      </Grid>
+    </Grid>
+    <Grid
+      container
+      justify="space-around"
+      fixed="true"
+      alignItems="center"
+      direction="column"
+    >
+      {children}
+    </Grid>
   </div>
-)
+);
