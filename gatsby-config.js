@@ -3,13 +3,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-material-ui`,
     `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    }
   ]
-};
-exports.modifyWebpackConfig = ({config, stage}) => {
-  switch(stage) {
-    case 'develop':
-      config._config.output.publicPath = `/`;
-      break;
-  }
 };
