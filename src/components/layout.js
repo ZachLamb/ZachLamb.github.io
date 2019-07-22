@@ -1,7 +1,7 @@
 import React from "react";
 
 import Grid from "@material-ui/core/Grid";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 import { Drawer } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -11,26 +11,26 @@ import "../styles/main.scss";
 
 export default ({ children, headshotImg }) => (
   <div>
-    <Grid container direction="row" justify="center" alignItems="center">
-      <Grid item lg={4}>
+    <Grid container direction="row" justify="center" alignItems="stretch">
+      <Grid item>
         <Drawer variant="permanent">
           <Grid
             container
             direction="column"
-            justify="stretch"
-            alignItems="center"
+            justify="space-between"
+            alignItems="stretch"
+            className="sidebar"
           >
-            <Grid item lg={3} className="image-avatar">
-                <Img fluid={headshotImg} />
+            <Grid item  className="image-avatar">
+              <Img fluid={headshotImg} />
             </Grid>
-            <Grid item lg={9}>
+            <Grid item>
               <List>
                 {[
-                  "Elevator Speech",
-                  "Skills",
-                  "Experience",
+                  "Blog",
+                  "Contact me",
+                  "Donate",
                   "About",
-                  "Contact"
                 ].map((text, index) => (
                   <ListItem button key={text}>
                     <ListItemText primary={text} />
@@ -41,18 +41,18 @@ export default ({ children, headshotImg }) => (
           </Grid>
         </Drawer>
       </Grid>
-    </Grid>
-    <Grid
-      container
-      justify="space-around"
-      fixed="true"
-      alignItems="center"
-      direction="column"
-    >
-      {children}
+
+      <Grid item>
+        <Grid
+          container
+          justify="space-around"
+          fixed="true"
+          alignItems="center"
+          direction="column"
+        >
+          {children}
+        </Grid>
+      </Grid>
     </Grid>
   </div>
 );
-
-
-
