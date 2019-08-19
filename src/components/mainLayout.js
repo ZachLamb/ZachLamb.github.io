@@ -9,10 +9,24 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import "../styles/main.scss";
 
+const sideMenuItems = [
+  "Elevator Pitch",
+  "Projects",
+  "About Me",
+  "Blog",
+  "Contact"
+];
+
 export default ({ children, headshotImg }) => (
-  <div>
-    <Grid container direction="row" justify="center" alignItems="stretch">
-      <Grid item>
+  <Grid
+    container
+    direction="row"
+    justify="center"
+    alignItems="center"
+    className="page-container "
+  >
+    <Grid item>
+      <nav>
         <Drawer variant="permanent">
           <Grid
             container
@@ -21,17 +35,12 @@ export default ({ children, headshotImg }) => (
             alignItems="stretch"
             className="sidebar"
           >
-            <Grid item  className="image-avatar">
+            <Grid item className="image-avatar">
               <Img fluid={headshotImg} />
             </Grid>
             <Grid item>
               <List>
-                {[
-                  "Blog",
-                  "Contact me",
-                  "Donate",
-                  "About",
-                ].map((text, index) => (
+                {sideMenuItems.map((text, index) => (
                   <ListItem button key={text}>
                     <ListItemText primary={text} />
                   </ListItem>
@@ -40,19 +49,10 @@ export default ({ children, headshotImg }) => (
             </Grid>
           </Grid>
         </Drawer>
-      </Grid>
-
-      <Grid item>
-        <Grid
-          container
-          justify="space-around"
-          fixed="true"
-          alignItems="center"
-          direction="column"
-        >
-          {children}
-        </Grid>
-      </Grid>
+      </nav>
     </Grid>
-  </div>
+    <Grid item className="page-container main-view">
+      {children}
+    </Grid>
+  </Grid>
 );

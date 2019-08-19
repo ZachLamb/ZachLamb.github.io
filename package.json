@@ -26,6 +26,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-typography": "^0.16.19",
+    "recharts": "^1.6.2",
     "typography": "^0.16.19",
     "typography-theme-grand-view": "^0.16.19"
   },

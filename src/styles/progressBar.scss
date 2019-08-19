@@ -1,0 +1,26 @@
+.progress {
+    display: flex;
+    align-content: stretch;
+    padding: 1%;
+}
+
+.progress h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 2%;
+}
+
+.progress-bar {
+    position: relative;
+    height: 20px;
+    width: 350px;
+    border-radius: 50px;
+    border: 1px solid #707070;
+}
+
+.progress-filler {
+    background: #99CED3;
+    height: 100%;
+    border-radius: inherit;
+    transition: width .2s ease-in;
+}

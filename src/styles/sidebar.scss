@@ -7,3 +7,11 @@
 .sidebar {
     padding: 8%;
 }
+@media (min-width: 1280px){
+    .sidebar {
+        min-width: 240px;
+    }
+}
+.page-container {
+    height: 100%;
+}
