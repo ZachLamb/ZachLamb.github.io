@@ -5,7 +5,7 @@ import "../styles/main.scss";
 import { Card, Grid, Typography } from "@material-ui/core";
 
 export default ({ children, title, description, containsBodyText }) => (
-  <Card>
+  <Card className="content-card-layout">
     <Typography variant="h4" component="h4">
       {title}
     </Typography>

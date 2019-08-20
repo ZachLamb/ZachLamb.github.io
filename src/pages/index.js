@@ -8,31 +8,43 @@ import Grow from "@material-ui/core/Grow";
 import { graphql } from "gatsby";
 import { Grid, Card, Typography } from "@material-ui/core";
 
-
 export default ({ data }) => (
   <Layout headshotImg={data.file.childImageSharp.fluid}>
     <Grid
       container
       alignItems="center"
       className="page-container elevator-cards"
-      justify="space-around"
+      justify="space-evenly"
     >
-      <Grid container direction="row" justify="center" spacing={16}>
+      <Grid container direction="row" justify="space-evenly">
         <Grow in>
-          <Grid item xl={6} lg={4} md={4} sm={12} xs={12}>
+          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <CardLayout
               title={"Top Skills"}
               description={"Approval ratings from current and past co-workers"}
               containsBodyText={false}
             >
-              <ProgressLayout progress={85} label={"JS"} />
-              <ProgressLayout progress={70} label={"HTML"} />
-              <ProgressLayout progress={80} label={"CSS"} />
+              <Grid item>
+                <Typography variant="h5" component="h5">
+                  JS
+                </Typography>
+                <Typography variant="h5" component="h5">
+                  HTML
+                </Typography>
+                <Typography variant="h5" component="h5">
+                  CSS
+                </Typography>
+              </Grid>
+              <Grid item>
+                <ProgressLayout progress={85} />
+                <ProgressLayout progress={70} />
+                <ProgressLayout progress={80} />
+              </Grid>
             </CardLayout>
           </Grid>
         </Grow>
         <Grow in timeout={1000}>
-          <Grid item xl={6} lg={4} md={4} sm={12} xs={12}>
+          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <CardLayout
               title={"Experience"}
               description={"This is what I have been up to the past few years"}
@@ -46,14 +58,12 @@ export default ({ data }) => (
           </Grid>
         </Grow>
       </Grid>
-      <Grid container direction="row" justify="center" spacing={16}>
+      <Grid container direction="row" justify="space-evenly">
         <Grow in timeout={2000}>
-          <Grid item xl={6} lg={4} md={4} sm={12} xs={12}>
+          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <CardLayout
               title={"About"}
-              description={
-                "My elevator speech"
-              }
+              description={"My elevator speech"}
               containsBodyText={true}
             >
               Hello there, I'm Zach a front-end dev who's curious how software
@@ -64,7 +74,7 @@ export default ({ data }) => (
           </Grid>
         </Grow>
         <Grow in timeout={3000}>
-          <Grid item xl={6} lg={4} md={4} sm={12} xs={12}>
+          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <Card>
               <Typography variant="h4" component="h4">
                 Contact
