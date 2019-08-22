@@ -6,21 +6,12 @@ import { graphql } from "gatsby";
 
 import "../styles/main.scss";
 
+import "../queries/image.gql";
+
 export default ({ data }) => (
   <div>
      <Img fixed={data.file.childImageSharp.fluid} />
   </div>
 );
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "zachlamb.jpg" }) {
-      childImageSharp {
-        fluid() {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }`
 
 
