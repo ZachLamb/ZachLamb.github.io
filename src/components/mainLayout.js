@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import Grid from "@material-ui/core/Grid";
 import Img from "gatsby-image";
@@ -38,15 +38,17 @@ export default ({ children, headshotImg }) => (
             <Grid item>
               <List>
                 {sideMenuItems.map((text, index) => (
-                  <ListItem button key={index}>
-                    <ListItemText primary={text} />
-                  </ListItem>
+                  <Fragment >
+                    <ListItem button key={index} component="li">
+                      <ListItemText primary={text} />
+                    </ListItem>
+                </Fragment>
                 ))}
               </List>
             </Grid>
           </Grid>
         </Paper>
-    <main className=" main-view">
+    <main className="main-view">
       {children}
     </main>
   </Grid>

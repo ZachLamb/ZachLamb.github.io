@@ -1,13 +1,13 @@
-.image-avatar {
-    min-width: 200px;
-}
+// .image-avatar {
+//     min-width: 200px;
+// }
 .image-avatar img{
     border-radius: 50%;
 }
 .sidebar {
     padding: 8%;
 }
-@media (min-width: 1280px){
+@media (min-width: $device-large){
     .sidebar {
         min-width: 240px;
     }
