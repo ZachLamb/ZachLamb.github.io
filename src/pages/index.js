@@ -90,3 +90,14 @@ export default ({ data }) => (
     </Grid>
   </Layout>
 );
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "zachlamb.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
