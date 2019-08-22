@@ -15,9 +15,9 @@ module.exports = {
   ],
   siteMetadata: {
     title: "Zach Lamb",
-    titleTemplate: "%s · Front-End Dev who loves UX and diversity",
+    titleTemplate: "%s · Front-End Dev and user advocate",
     description:
-      "Zach Lamb is a front-end dev who loves UX and occassionally dabbles in the backend",
+      "Zach Lamb is a front-end dev who loves UX, accesibility, diversity, and occassionally dabbles in the backend",
     url: "https://www.zachlamb.io", // No trailing slash allowed!
     image: "/images/zachlamb.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@ozachlambchops",

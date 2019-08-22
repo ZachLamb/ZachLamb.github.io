@@ -1,15 +1,19 @@
 import React from "react";
+import { Helmet } from "react-helmet"
+import { graphql } from "gatsby";
+
 import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
 import ProgressLayout from "../components/progressLayout";
-import "../styles/main.scss";
-
 import Grow from "@material-ui/core/Grow";
-import { graphql } from "gatsby";
 import { Grid, Card, Typography } from "@material-ui/core";
+
+import "../styles/main.scss";
+import SEO from "../components/SEO";
 
 export default ({ data }) => (
   <Layout headshotImg={data.file.childImageSharp.fluid}>
+    <SEO></SEO>
     <Grid
       container
       alignItems="center"
