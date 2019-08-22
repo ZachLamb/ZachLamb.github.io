@@ -9,8 +9,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 import "../styles/main.scss";
 
-// import query from "../queries/image.gql";
-
 const sideMenuItems = [
   "Elevator Pitch",
   "Projects",
