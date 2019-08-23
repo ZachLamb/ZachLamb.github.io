@@ -12,6 +12,21 @@
         min-width: 240px;
     }
 }
+@media (min-width: $device-medium){
+    .sidebar {
+        min-width: 120px;
+    }
+}
+@media (min-width: $device-large){
+    .image-avatar {
+        height: 240px;;
+    }
+}
+@media (min-width: $device-medium){
+    .image-avatar {
+        height: 140px;;
+    }
+}
 .page-container {
     height: 100%;
 }

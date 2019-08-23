@@ -8,9 +8,15 @@
 .page-container nav {
   height: 100%;
 }
-@media (min-width: $device-medium) {
+@media (min-width: $device-medium) and (min-width: $device-large) {
   nav {
     width: 20%;
+  }
+}
+
+@media(min-width: $device-extra-large){
+  nav {
+      width: 10%;
   }
 }
 
