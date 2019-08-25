@@ -4,6 +4,7 @@
 @import "customGatsby.scss";
 @import "progressBar.scss";
 @import "cardLayout.scss";
+@import 'variables.scss';
 
 .page-container nav {
   height: 100%;
@@ -28,4 +29,8 @@ main {
 
 main {
   height: 100%;
+}
+
+nav.MuiPaper-root-98 {
+  background-color: $purple-blue;
 }
