@@ -1,5 +1,5 @@
 .image-avatar {
-    height: 240px;;
+    width: 100%;
 }
 .image-avatar img{
     border-radius: 50%;
@@ -7,26 +7,10 @@
 .sidebar {
     padding: 8%;
 }
-@media (min-width: $device-large){
-    .sidebar {
-        min-width: 240px;
-    }
-}
-@media (min-width: $device-medium){
-    .sidebar {
-        min-width: 120px;
-    }
-}
-@media (min-width: $device-large){
-    .image-avatar {
-        height: 240px;;
-    }
-}
-@media (min-width: $device-medium){
-    .image-avatar {
-        height: 140px;;
-    }
-}
+
 .page-container {
     height: 100%;
+}
+.gatsby-image-wrapper {
+    width: 100%;
 }

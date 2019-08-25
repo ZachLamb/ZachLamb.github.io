@@ -1,21 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import Grid from "@material-ui/core/Grid";
-import Img from "gatsby-image";
-import { Paper } from "@material-ui/core";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 
 import "../styles/main.scss";
-
-const sideMenuItems = [
-  "Elevator Pitch",
-  "Projects",
-  "About Me",
-  "Blog",
-  "Contact"
-];
+import Navbar from "./navbar";
 
 export default ({ children, headshotImg }) => (
   <Grid
@@ -24,30 +12,7 @@ export default ({ children, headshotImg }) => (
     alignItems="center"
     className="page-container "
   >
-        <Paper component="nav">
-          <Grid
-            container
-            direction="column"
-            justify="space-between"
-            alignItems="stretch"
-            className="sidebar"
-          >
-            <Grid item className="image-avatar">
-              <Img fluid={headshotImg} />
-            </Grid>
-            <Grid item>
-              <List>
-                {sideMenuItems.map((text, index) => (
-                  <Fragment >
-                    <ListItem button key={index} component="li">
-                      <ListItemText primary={text} />
-                    </ListItem>
-                </Fragment>
-                ))}
-              </List>
-            </Grid>
-          </Grid>
-        </Paper>
+  <Navbar headshotImg={headshotImg} ></Navbar>
     <main className="main-view">
       {children}
     </main>

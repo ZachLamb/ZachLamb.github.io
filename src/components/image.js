@@ -8,9 +8,7 @@ import "../styles/main.scss";
 
 
 export default ({ data }) => (
-  <div>
      <Img fixed={data.file.childImageSharp.fluid} />
-  </div>
 );
 
 export const query = graphql`
