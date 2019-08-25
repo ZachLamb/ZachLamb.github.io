@@ -1,23 +1,28 @@
-import React,{ Fragment } from "react";
+import React, { Fragment } from "react";
 
 import "../styles/main.scss";
 
-import {Grid, Paper  } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 import Img from "gatsby-image";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { Link } from "gatsby";
 
 const sideMenuItems = [
-  "Elevator Pitch",
-  "Projects",
-  "About Me",
-  "Blog",
-  "Contact"
+  {
+    title: "Elevator Pitch",
+    link: "/"
+  },
+  { title: "Skills", link: "/skills/" },
+  { title: "Projects", link: "/projects/" },
+  { title: "About Me", link: "/about/" },
+  { title: "Blog", link: "/blog/" },
+  { title: "Contact", link: "/contact/" }
 ];
 
 export default ({ children, headshotImg }) => (
-    <Paper component="nav">
+  <Paper component="nav">
     <Grid
       container
       direction="column"
@@ -30,12 +35,12 @@ export default ({ children, headshotImg }) => (
       </Grid>
       <Grid item>
         <List>
-          {sideMenuItems.map((text, index) => (
-            <Fragment >
-              <ListItem button key={index} component="li">
-                <ListItemText primary={text} />
-              </ListItem>
-          </Fragment>
+          {sideMenuItems.map((sideMenuItem, index) => (
+            <ListItem buttoncomponent="li" key={index}>
+              <Link to={sideMenuItem.link}>
+                <ListItemText className="sidebar-text" primary={sideMenuItem.title} />
+              </Link>
+            </ListItem>
           ))}
         </List>
       </Grid>
