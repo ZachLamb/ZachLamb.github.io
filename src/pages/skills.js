@@ -1,10 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/mainLayout";
-import Grow from "@material-ui/core/Grow";
-import { Grid, Card, Typography } from "@material-ui/core";
+import { Grid, } from "@material-ui/core";
 
 import "../styles/main.scss";
 import SEO from "../components/SEO";
