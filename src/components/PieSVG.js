@@ -1,22 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
-
-const Arc = ({ data, index, createArc, colors, format }) => (
-  <g key={index} className="arc">
-    <path className="arc" d={createArc(data)} fill={colors(index)} />
-    <text
-      transform={`translate(${createArc.centroid(data)})`}
-      textAnchor="middle"
-      alignmentBaseline="middle"
-      fill="white"
-      fontSize="10"
-    >
-      {format(data.value)}
-    </text>
-  </g>
-);
+import { grey } from "@material-ui/core/colors";
 
 const Pie = props => {
+  const ref = useRef(null);
   const createPie = d3
     .pie()
     .value(d => d.value)
@@ -25,24 +12,56 @@ const Pie = props => {
     .arc()
     .innerRadius(props.innerRadius)
     .outerRadius(props.outerRadius);
-  const colors = d3.scaleOrdinal(d3.schemeCategory10);
+  const colors = d3.scaleOrdinal([
+    "#86A3D1",
+    "#343F52",
+    "#4A81D9",
+    "#1C3052",
+    "#657B9E",
+    "#99CED3"
+  ]);
   const format = d3.format(".2f");
-  const data = createPie(props.data);
+
+  useEffect(() => {
+    const data = createPie(props.data);
+    const group = d3.select(ref.current);
+    const groupWithData = group.selectAll("g.arc").data(data);
+
+    groupWithData.exit().remove();
+
+    const groupWithUpdate = groupWithData
+      .enter()
+      .append("g")
+      .attr("class", "arc");
+
+    const path = groupWithUpdate
+      .append("path")
+      .merge(groupWithData.select("path.arc"));
+
+    path
+      .attr("class", "arc")
+      .attr("d", createArc)
+      .attr("fill", (d, i) => colors(i));
+
+    const text = groupWithUpdate
+      .append("text")
+      .merge(groupWithData.select("text"));
+
+    text
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .attr("transform", d => `translate(${createArc.centroid(d)})`)
+      .style("fill", "white")
+      .style("font-size", 16)
+      .text(d => format(d.value));
+  }, [props.data]);
 
   return (
-    <svg width={props.width} height={props.height}>
-      <g transform={`translate(${props.outerRadius} ${props.outerRadius})`}>
-        {data.map((d, i) => (
-          <Arc
-            key={i}
-            data={d}
-            index={i}
-            createArc={createArc}
-            colors={colors}
-            format={format}
-          />
-        ))}
-      </g>
+    <svg width={props.width} height={props.height} className="skills-pie-chart">
+      <g
+        ref={ref}
+        transform={`translate(${props.outerRadius} ${props.outerRadius})`}
+      />
     </svg>
   );
 };

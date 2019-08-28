@@ -1,12 +1,12 @@
 import React from "react";
-import { Helmet } from "react-helmet"
 import { graphql } from "gatsby";
 
 import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
 import ProgressLayout from "../components/progressLayout";
 import Grow from "@material-ui/core/Grow";
-import { Grid, Card, Typography } from "@material-ui/core";
+import { Grid, Card, Typography, Icon } from "@material-ui/core";
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 import "../styles/main.scss";
 import SEO from "../components/SEO";
@@ -84,7 +84,8 @@ export default ({ data }) => (
                 Contact
               </Typography>
               <Typography variant="h5" component="h5">
-                Description
+                Email me zach94ATgmaildotcom
+                  <ContactMailIcon></ContactMailIcon>
               </Typography>
               <Grid container />
             </Card>

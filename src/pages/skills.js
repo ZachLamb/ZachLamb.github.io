@@ -1,27 +1,52 @@
 import React from "react";
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
-import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
-import ProgressLayout from "../components/progressLayout";
 import Grow from "@material-ui/core/Grow";
 import { Grid, Card, Typography } from "@material-ui/core";
 
 import "../styles/main.scss";
 import SEO from "../components/SEO";
-import PieChart from "../components/PieChart";
+import RBChart from "../components/RBChart";
+const languages = [
+  {
+    name: "JS",
+    value: 9,
+    fill: "#86a3d1"
+  },
+  {
+    name: "HTML",
+    value: 6,
+    fill: "#343f52"
+  },
+  {
+    name: "CSS",
+    value: 8,
+    fill: "#4a81d9"
+  },
+  {
+    name: "Python",
+    value: 3,
+    fill: "#1c3052"
+  },
+  {
+    name: "Java",
+    value: 2,
+    fill: "#657b9e"
+  }
+];
 
 export default ({ data }) => (
   <Layout headshotImg={data.file.childImageSharp.fluid}>
     <SEO></SEO>
     <Grid
       container
-      alignItems="center"
-      className="page-container elevator-cards"
+      className="page-container"
       justify="space-evenly"
+      alignItems="center"
     >
-      <PieChart />
+          <RBChart data={languages} />
     </Grid>
   </Layout>
 );

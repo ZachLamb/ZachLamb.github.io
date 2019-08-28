@@ -1,7 +1,20 @@
-$purple-blue : #86A3D1;
-$turqoise: #99CED3;
+$purple-blue: #86a3d1;
+$dark-grey: #343f52;
+$blue: #4a81d9;
+$dark-blue: #1c3052;
+$grey-blue: #657b9e;
+$turqoise: #99ced3;
 $device-extra-small: 0px;
 $device-small: 600px;
 $device-medium: 960px;
 $device-large: 1280px;
 $device-extra-large: 1920px;
+// the :export directive is the magic sauce for webpack
+:export {
+  purpleblue: $purple-blue;
+  darkgrey: $dark-grey;
+  blue: $blue;
+  darkblue: $dark-blue;
+  greyblue: $grey-blue;
+  turquoise: $turqoise;
+}
