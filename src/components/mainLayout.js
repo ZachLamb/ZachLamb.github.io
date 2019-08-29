@@ -2,8 +2,9 @@ import React from "react";
 
 import Grid from "@material-ui/core/Grid";
 
-import "../styles/main.scss";
 import Navbar from "./navbar";
+
+import "../styles/main.scss";
 
 export default ({ children, headshotImg }) => (
   <Grid

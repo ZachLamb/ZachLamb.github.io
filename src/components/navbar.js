@@ -15,14 +15,14 @@ const sideMenuItems = [
     link: "/"
   },
   { title: "Skills", link: "/skills/" },
-  { title: "Projects", link: "/projects/" },
-  { title: "About Me", link: "/about/" },
-  { title: "Blog", link: "/blog/" },
-  { title: "Contact", link: "/contact/" }
+  // { title: "Projects", link: "/projects/" },
+  // { title: "About Me", link: "/about/" },
+  // { title: "Blog", link: "/blog/" },
+  // { title: "Contact", link: "/contact/" }
 ];
 
 export default ({ children, headshotImg }) => (
-  <Paper component="nav">
+  <Paper component="nav" className="nav-bar-purple">
     <Grid
       container
       direction="column"
