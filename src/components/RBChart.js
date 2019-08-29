@@ -33,11 +33,11 @@ export default function RBChart(props) {
         />
         <Legend
           iconSize={20}
-          width={120}
+          width={200}
           height={140}
           layout="vertical"
+          align="right"
           verticalAlign="middle"
-          align="left"
           iconType="circle"
         />
         <Tooltip labelFormatter={index => props.data[index].name}/>

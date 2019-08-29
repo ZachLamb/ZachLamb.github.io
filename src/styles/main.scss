@@ -12,6 +12,7 @@
 }
 main {
   width: 80%;
+  padding: 3%;
 }
 @media (min-width: #{$device-medium}), (min-width: #{$device-large}) {
   nav {

@@ -80,14 +80,13 @@ export default ({ data }) => (
         <Grow in timeout={3000}>
           <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <Card>
-              <Typography variant="h4" component="h4">
-                Contact
-              </Typography>
-              <Typography variant="h5" component="h5">
-                Email me zach94ATgmaildotcom
-                  <ContactMailIcon></ContactMailIcon>
-              </Typography>
-              <Grid container />
+            <CardLayout
+              title={"Contact"}
+              description={"Let's grab coffee, tea, or a beer and talk tech!"}
+              containsBodyText={true}
+            >
+             Email me zach94ATgmaildotcom
+            </CardLayout>
             </Card>
           </Grid>
         </Grow>
