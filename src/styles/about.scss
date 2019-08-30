@@ -1,0 +1,23 @@
+
+
+main.aboutPage {
+    padding: 0;
+}
+
+.aboutPage h1 {
+    color: $purple-blue;
+}
+
+.aboutCard {
+    align-self: center;
+}
+
+.aboutTitle {
+    padding-left: 8%;
+}
+
+.aboutPage .card-button {
+    border-color: $purple-blue;
+    color: $purple-blue;
+    margin-top: 10%;
+}
