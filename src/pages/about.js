@@ -1,107 +1,67 @@
 import React from "react";
-import { Helmet } from "react-helmet"
-import { graphql } from "gatsby";
 
 import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
-import ProgressLayout from "../components/progressLayout";
 import Grow from "@material-ui/core/Grow";
-import { Grid, Card, Typography } from "@material-ui/core";
+import { Grid, Card, Typography, Paper, Button } from "@material-ui/core";
+import Img from "gatsby-image";
 
 import "../styles/main.scss";
-import SEO from "../components/SEO";
 
 export default ({ data }) => (
-  <Layout headshotImg={data.file.childImageSharp.fluid}>
-    <SEO></SEO>
-    <Grid
-      container
-      alignItems="center"
-      className="page-container elevator-cards"
-      justify="space-evenly"
-    >
-      <Grid container direction="row" justify="space-evenly">
-        <Grow in>
-          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
-            <CardLayout
-              title={"Top Skills"}
-              description={"Approval ratings from current and past co-workers"}
-              containsBodyText={false}
-            >
-              <Grid item>
-                <Typography variant="h5" component="h5">
-                  JS
-                </Typography>
-                <Typography variant="h5" component="h5">
-                  HTML
-                </Typography>
-                <Typography variant="h5" component="h5">
-                  CSS
-                </Typography>
-              </Grid>
-              <Grid item>
-                <ProgressLayout progress={85} />
-                <ProgressLayout progress={70} />
-                <ProgressLayout progress={80} />
-              </Grid>
-            </CardLayout>
-          </Grid>
-        </Grow>
-        <Grow in timeout={1000}>
-          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
-            <CardLayout
-              title={"Experience"}
-              description={"This is what I have been up to the past few years"}
-              containsBodyText={true}
-            >
-              During the past two years, I have been working as a software
-              engineer on enterprise level software at The Regis Company. Before
-              that, I worked at Charter Communications ,and created the
-              front-end for an app that automated testing for network engineers.
-            </CardLayout>
-          </Grid>
-        </Grow>
+  <Layout pageStyle={"aboutPage"}>
+    <Grid container className="page-container elevator-cards">
+      <Grid container direction="row" alignContent="center" className="aboutTitle">
+        <Typography variant="h1" component="h1">
+        Hi, I'm Zach
+        </Typography>
       </Grid>
-      <Grid container direction="row" justify="space-evenly">
+      <Grid container direction="row" spacing={40} justify="center">
         <Grow in timeout={2000}>
           <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
             <CardLayout
-              title={"About"}
-              description={"My elevator speech"}
+              title={"An engineer who loves UX"}
               containsBodyText={true}
+              cardClass={"aboutCard"}
+              button={"Add me on LinkedIn"}
+              buttonLink={"https://www.linkedin.com/in/lambzachary/"}
             >
-              Hello there, I'm Zach a front-end dev who's curious how software
-              influences people, and that is my drive to learn. I learn how to
-              make compelling UIs driven by UX because I'm a people person ,and
-              making them happy makes me happy.
+              I am a software engineer who's driven by users. No, I'm not one of those 10x engineers. I'm one of those engineers who likes putting people first. I'm a proud alumn of CU Boulder where I was president of an LGBTQIA+ student group. I have two years of
+              experience as a front-end dev.
             </CardLayout>
           </Grid>
         </Grow>
-        <Grow in timeout={3000}>
-          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
-            <Card>
-              <Typography variant="h4" component="h4">
-                Contact
-              </Typography>
-              <Typography variant="h5" component="h5">
-                Description
-              </Typography>
-              <Grid container />
-            </Card>
-          </Grid>
-        </Grow>
+        <Grid item xl={5} lg={5} md={7} sm={12} xs={12}>
+          <Paper><Img fluid={data.telluride.childImageSharp.fluid} alt="picture of mountains outside of Telluride,CO"/></Paper>
+        </Grid>
       </Grid>
     </Grid>
   </Layout>
 );
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "zachlamb.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+
+export const aboutImage = graphql`
+  fragment aboutImage on File {
+    childImageSharp {
+      fluid(maxWidth: 500, maxHeight: 500) {
+        ...GatsbyImageSharpFluid
       }
+    }
+  }
+`;
+
+export const pageQuery = graphql`
+  query {
+    loveDogs: file(relativePath: { eq: "loveDogs.jpeg" }) {
+      ...aboutImage
+    }
+    glacier: file(relativePath: { eq: "glacier.jpg" }) {
+      ...aboutImage
+    }
+    ourayBeer: file(relativePath: { eq: "ourayBeer.jpeg" }) {
+      ...aboutImage
+    }
+    telluride: file(relativePath: { eq: "telluride.jpg" }) {
+      ...aboutImage
     }
   }
 `;

@@ -1,3 +1,4 @@
+@import './variables';
 @import "home.scss";
 @import "menu.scss";
 @import "sidebar.scss";
@@ -5,7 +6,7 @@
 @import "progressBar.scss";
 @import "cardLayout.scss";
 @import "skills.scss";
-@import './variables';
+@import "about.scss";
 
 .page-container nav {
   height: 100%;

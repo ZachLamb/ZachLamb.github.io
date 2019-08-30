@@ -6,14 +6,11 @@ import Layout from "../components/mainLayout";
 import ProgressLayout from "../components/progressLayout";
 import Grow from "@material-ui/core/Grow";
 import { Grid, Card, Typography } from "@material-ui/core";
-import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 import "../styles/main.scss";
-import SEO from "../components/SEO";
 
 export default ({ data }) => (
   <Layout headshotImg={data.file.childImageSharp.fluid}>
-    <SEO></SEO>
     <Grid
       container
       alignItems="center"

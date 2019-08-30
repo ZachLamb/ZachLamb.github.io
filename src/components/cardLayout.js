@@ -2,10 +2,10 @@ import React from "react";
 
 import "../styles/main.scss";
 
-import { Card, Grid, Typography } from "@material-ui/core";
+import { Card, Grid, Typography, Button } from "@material-ui/core";
 
-export default ({ children, title, description, containsBodyText }) => (
-  <Card className="content-card-layout">
+export default ({ children, title, description, containsBodyText, cardClass ,button,buttonLink}) => (
+  <Card className={"content-card-layout "+ cardClass} >
     <Typography variant="h4" component="h4">
       {title}
     </Typography>
@@ -17,6 +17,9 @@ export default ({ children, title, description, containsBodyText }) => (
         <Typography variant="body1" component="p" className="card-content">
           {children}
         </Typography>
+        {!!button && !!buttonLink &&(
+          <Button variant="outlined" className="card-button" href={buttonLink}>{button}</Button>
+        )}
       </Grid>
     )}
     {!containsBodyText && <div className="card-content">{children}</div>}

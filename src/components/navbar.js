@@ -9,6 +9,8 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Link } from "gatsby";
 
+import { StaticQuery, graphql } from "gatsby";
+
 const sideMenuItems = [
   {
     title: "Elevator Pitch",
@@ -16,34 +18,53 @@ const sideMenuItems = [
   },
   { title: "Skills", link: "/skills/" },
   // { title: "Projects", link: "/projects/" },
-  // { title: "About Me", link: "/about/" },
+  { title: "About Me", link: "/about/" }
   // { title: "Blog", link: "/blog/" },
   // { title: "Contact", link: "/contact/" }
 ];
 
-export default ({ children, headshotImg }) => (
-  <Paper component="nav" className="nav-bar-purple">
-    <Grid
-      container
-      direction="column"
-      justify="space-between"
-      alignItems="stretch"
-      className="sidebar"
-    >
-      <Grid item className="image-avatar">
-        <Img fluid={headshotImg} />
-      </Grid>
-      <Grid item>
-        <List>
-          {sideMenuItems.map((sideMenuItem, index) => (
-            <ListItem buttoncomponent="li" key={index}>
-              <Link to={sideMenuItem.link}>
-                <ListItemText className="sidebar-text" primary={sideMenuItem.title} />
-              </Link>
-            </ListItem>
-          ))}
-        </List>
-      </Grid>
-    </Grid>
-  </Paper>
+
+export default ({ data }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "zachlamb.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Paper component="nav" className="nav-bar-purple">
+        <Grid
+          container
+          direction="column"
+          justify="space-between"
+          alignItems="stretch"
+          className="sidebar"
+        >
+          <Grid item className="image-avatar">
+            <Img fluid={data.file.childImageSharp.fluid} alt={"Picture of Zach Lamb"} />
+          </Grid>
+          <Grid item>
+            <List>
+              {sideMenuItems.map((sideMenuItem, index) => (
+                <ListItem buttoncomponent="li" key={index}>
+                  <Link to={sideMenuItem.link}>
+                    <ListItemText
+                      className="sidebar-text"
+                      primary={sideMenuItem.title}
+                    />
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+        </Grid>
+      </Paper>
+    )}
+  />
 );
