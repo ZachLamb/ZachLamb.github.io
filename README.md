@@ -6,8 +6,9 @@
 </p>
 <h1 align="center">
   Zach Lamb's website made with Gatsby
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/f4ab2596-593f-468b-8041-d786926b0476/deploy-status)](https://app.netlify.com/sites/zachlamb/deploys)
 </h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f4ab2596-593f-468b-8041-d786926b0476/deploy-status)](https://app.netlify.com/sites/zachlamb/deploys)
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
