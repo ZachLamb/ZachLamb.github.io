@@ -7,6 +7,7 @@ import { Grid, Card, Typography, Paper, Button } from "@material-ui/core";
 import Img from "gatsby-image";
 
 import "../styles/main.scss";
+import RadarReactChart from "../components/RadarReactChart";
 
 export default ({ data }) => (
   <Layout pageStyle={"aboutPage"}>
@@ -18,7 +19,7 @@ export default ({ data }) => (
       </Grid>
       <Grid container direction="row" spacing={40} justify="center">
         <Grow in timeout={2000}>
-          <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
+          <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
             <CardLayout
               title={"An engineer who loves UX"}
               containsBodyText={true}
@@ -26,13 +27,13 @@ export default ({ data }) => (
               button={"Add me on LinkedIn"}
               buttonLink={"https://www.linkedin.com/in/lambzachary/"}
             >
-              I am a software engineer who's driven by users. No, I'm not one of those 10x engineers. I'm one of those engineers who likes putting people first. I'm a proud alumn of CU Boulder where I was president of an LGBTQIA+ student group. I have two years of
-              experience as a front-end dev.
+             I love people, tech, dogs, and hiking in that order. I'm a proud alumn of CU Boulder where I was president of an LGBTQIA+ student group. I have two years of
+              experience as a front-end dev. Before that, I did a brief stint as a UX designer in school , and I use that to make more informed technical decisions in my work. 
             </CardLayout>
           </Grid>
         </Grow>
-        <Grid item xl={5} lg={5} md={7} sm={12} xs={12}>
-          <Paper><Img fluid={data.telluride.childImageSharp.fluid} alt="picture of mountains outside of Telluride,CO"/></Paper>
+        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+          <RadarReactChart></RadarReactChart>
         </Grid>
       </Grid>
     </Grid>

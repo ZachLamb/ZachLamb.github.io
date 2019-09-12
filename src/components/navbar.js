@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import "../styles/main.scss";
 
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 import Img from "gatsby-image";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -48,6 +48,11 @@ export default ({ data }) => (
         >
           <Grid item className="image-avatar">
             <Img fluid={data.file.childImageSharp.fluid} alt={"Picture of Zach Lamb"} />
+          </Grid>
+          <Grid item>
+            <Typography variant="h1" className="dev-name">
+              Zach Lamb
+            </Typography>
           </Grid>
           <Grid item>
             <List>
