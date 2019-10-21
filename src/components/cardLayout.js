@@ -18,7 +18,7 @@ export default ({ children, title, description, containsBodyText, cardClass ,but
           {children}
         </Typography>
         {!!button && !!buttonLink &&(
-          <Button variant="outlined" className="card-button" href={buttonLink}>{button}</Button>
+          <Button variant="outlined" className="card-button" href={buttonLink}>{button} rel="noopener"</Button>
         )}
       </Grid>
     )}

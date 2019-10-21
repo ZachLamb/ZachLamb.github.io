@@ -1,11 +1,13 @@
 .image-avatar {
-    width: 100%;
+    width: 70%;
+    align-self: center;
 }
 .image-avatar img{
     border-radius: 50%;
 }
 .sidebar {
     padding: 8%;
+    align-items: stretch;
 }
 
 .page-container {
@@ -16,10 +18,23 @@
 }
 nav a .sidebar-text span {
     color: white;
+    padding-left: 0;
+}
+
+nav li:hover {
+    text-decoration: underline;
 }
 nav .dev-name {
     color: white;
     font-size: 30pt;
     padding-top: 15%;
     font-weight: 600;
+}
+
+.sidebar li {
+    padding-left: 0;
+}
+
+.sidebar .sidebar-list {
+    padding-top: 3%;
 }
