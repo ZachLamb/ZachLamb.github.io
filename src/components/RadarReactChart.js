@@ -14,56 +14,43 @@ import "../styles/main.scss";
 const data = [
   {
     subject: "Front End",
-    A: 120,
-    B: 110,
-    fullMark: 150
+    A: 70,
+    fullMark: 80
   },
   {
     subject: "Back End",
-    A: 98,
-    B: 130,
-    fullMark: 150
+    A: 20,
+    fullMark: 80
   },
   {
     subject: "Product",
-    A: 86,
-    B: 130,
-    fullMark: 150
+    A: 10,
+    fullMark: 80
   },
   {
     subject: "Yoga",
-    A: 99,
-    B: 100,
-    fullMark: 150
+    B: 50,
+    fullMark: 80
   },
   {
     subject: "Hiking",
-    A: 85,
-    B: 90,
-    fullMark: 150
+    B: 30,
+    fullMark: 80
   },
   {
     subject: "Graphic Design",
-    A: 65,
-    B: 85,
-    fullMark: 150
+    B: 20,
+    fullMark: 80
   }
 ];
 
 export default function RadarReactChart(props) {
   return (
-    <ResponsiveContainer width="100%" height="50%">
-      <RadarChart outerRadius={90} data={data} width={1400} height={500}>
+    <ResponsiveContainer width="100%" height="65%">
+      <RadarChart outerRadius={90} data={data} width={1400} height={300}>
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis angle={30} domain={[0, 150]} />
-        <Radar
-          name="What percentage of my time is spent on at work"
-          dataKey="A"
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
-        />
+        <PolarRadiusAxis angle={130} domain={[0, 100]} />
         <Radar
           name="What percentage of my time is spent outside of work"
           dataKey="B"
@@ -71,7 +58,14 @@ export default function RadarReactChart(props) {
           fill="#82ca9d"
           fillOpacity={0.6}
         />
-        <Legend />
+<Radar
+          name="What percentage of my time is spent on at work"
+          dataKey="A"
+          stroke="#8884d8"
+          fill="#8884d8"
+          fillOpacity={0.6}
+        />
+        <Legend  className="about-radar-legend"/>
       </RadarChart>
     </ResponsiveContainer>
   );

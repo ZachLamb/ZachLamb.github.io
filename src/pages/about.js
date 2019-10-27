@@ -27,12 +27,12 @@ export default ({ data }) => (
               button={"Add me on LinkedIn"}
               buttonLink={"https://www.linkedin.com/in/lambzachary/"}
             >
-             I love people, tech, dogs, and hiking in that order. I'm a proud alumn of CU Boulder where I was president of an LGBTQIA+ student group. I have two years of
-              experience as a front-end dev. Before that, I did a brief stint as a UX designer in school , and I use that to make more informed technical decisions in my work. 
+             I love people, tech, dogs, and the outdoors in that order. I have been developing web apps for the past two years and a half years. I love having 
+             I'm a proud alumn of CU Boulder. In school, I helped organize a hackathon called T9 Hacks ,and I was president of a student organization while I was there.
             </CardLayout>
           </Grid>
         </Grow>
-        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+        <Grid item xl={6} lg={6} md={6} className="about-chart">
           <RadarReactChart></RadarReactChart>
         </Grid>
       </Grid>
