@@ -16,7 +16,6 @@ export default ({ children, pageStyle }) => (
   >
     <SEO></SEO>
     <Navbar></Navbar>
-    <button className="mobile">Menu</button>
     <main className={"main-view " + pageStyle}>{children}</main>
   </Grid>
 );
