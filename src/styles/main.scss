@@ -7,6 +7,7 @@
 @import "cardLayout.scss";
 @import "skills.scss";
 @import "about.scss";
+@import "mobile.scss";
 
 .page-container nav {
   height: 100%;
@@ -15,13 +16,22 @@ main {
   width: 80%;
   padding: 3%;
 }
-@media (min-width: #{$device-medium}), (min-width: #{$device-large}) {
+
+@media screen and (min-width: 0) and (max-width: #{$device-medium}) {
+  nav {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+}
+@media screen and (min-width: #{$device-medium}), (min-width: #{$device-large}) {
   nav {
     width: 20%;
   }
 }
 
-@media(min-width: $device-extra-large){
+@media screen and (min-width: $device-extra-large){
   nav {
       width: 10%;
   }

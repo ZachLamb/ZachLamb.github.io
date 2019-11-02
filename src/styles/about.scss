@@ -16,6 +16,17 @@
 
 
  .aboutPage .recharts-surface .recharts-legend-wrapper {
-    padding-top: 1%;
-    bottom:-56.2344px;
+     left: auto;
+     right: auto;
+}
+
+.aboutPage tspan {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .about-chart {
+        display: none;;
+    }
 }
