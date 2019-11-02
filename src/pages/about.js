@@ -5,6 +5,7 @@ import Layout from "../components/mainLayout";
 import Grow from "@material-ui/core/Grow";
 import { Grid, Card, Typography, Paper, Button } from "@material-ui/core";
 import Img from "gatsby-image";
+import { graphql } from 'gatsby'
 
 import "../styles/main.scss";
 import RadarReactChart from "../components/RadarReactChart";
