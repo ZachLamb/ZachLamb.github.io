@@ -3,8 +3,7 @@ import React from "react";
 import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
 import Grow from "@material-ui/core/Grow";
-import { Grid, Card, Typography, Paper, Button } from "@material-ui/core";
-import Img from "gatsby-image";
+import { Grid, Typography } from "@material-ui/core";
 
 import "../styles/main.scss";
 import RadarReactChart from "../components/RadarReactChart";
@@ -39,30 +38,3 @@ export default ({ data }) => (
     </Grid>
   </Layout>
 );
-
-export const aboutImage = graphql`
-  fragment aboutImage on File {
-    childImageSharp {
-      fluid(maxWidth: 500, maxHeight: 500) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`;
-
-export const pageQuery = graphql`
-  query {
-    loveDogs: file(relativePath: { eq: "loveDogs.jpeg" }) {
-      ...aboutImage
-    }
-    glacier: file(relativePath: { eq: "glacier.jpg" }) {
-      ...aboutImage
-    }
-    ourayBeer: file(relativePath: { eq: "ourayBeer.jpeg" }) {
-      ...aboutImage
-    }
-    telluride: file(relativePath: { eq: "telluride.jpg" }) {
-      ...aboutImage
-    }
-  }
-`;
