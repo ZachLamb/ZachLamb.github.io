@@ -12,64 +12,31 @@ import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
 
 const sideMenuItems = [
-  {
-    title: "Elevator Pitch",
-    link: "/"
-  },
-  { title: "Skills", link: "/skills/" },
-  // { title: "Projects", link: "/projects/" },
-  { title: "About Me", link: "/about/" }
-  // { title: "Blog", link: "/blog/" },
-  // { title: "Contact", link: "/contact/" }
+  { title: "Zach Lamb", link: "/", cssName: "home" },
+  { title: "Projects", link: "/projects/" },
+  { title: "About Me", link: "/about/" },
+  { title: "Blog", link: "/blog/" },
+  { title: "Contact", link: "/contact/" }
 ];
 
-
-export default ({ data }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        file(relativePath: { eq: "zachlamb.jpg" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Paper component="nav" className="nav-bar-purple">
-        <Grid
-          container
-          direction="column"
-          justify="space-between"
-          alignItems="stretch"
-          className="sidebar"
-        >
-          <Grid item className="image-avatar">
-            <Img fluid={data.file.childImageSharp.fluid} alt={"Picture of Zach Lamb"} />
-          </Grid>
-          <Grid item>
-            <Typography variant="h1" className="dev-name">
-              Zach Lamb
-            </Typography>
-          </Grid>
-          <Grid item>
-            <List>
-              {sideMenuItems.map((sideMenuItem, index) => (
-                <ListItem buttoncomponent="li" key={index}>
-                  <Link to={sideMenuItem.link}>
-                    <ListItemText
-                      className="sidebar-text"
-                      primary={sideMenuItem.title}
-                    />
-                  </Link>
-                </ListItem>
-              ))}
-            </List>
-          </Grid>
-        </Grid>
-      </Paper>
-    )}
-  />
+const NavBar = props => {
+  return (
+    <nav>
+    <List>
+    {sideMenuItems.map((sideMenuItem, index) => (
+      <ListItem buttoncomponent="li" key={index} alignItems="center" id="nav-item" className={sideMenuItem.cssName ? sideMenuItem.cssName:""}>
+        <Link to={sideMenuItem.link} activeClassName="active">
+          <ListItemText
+            className="sidebar-text"
+            primary={sideMenuItem.title}
+          />
+        </Link>
+        <div className="dot"></div>
+      </ListItem>
+    ))}
+  </List>
+  </nav>
 );
+};
+
+export default NavBar;

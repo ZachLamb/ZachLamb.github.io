@@ -10,7 +10,7 @@ import "../styles/main.scss";
 export default ({ children,pageStyle }) => (
   <Grid
     container
-    direction="column"
+    direction="row"
     alignItems="center"
     className="page-container "
   >
