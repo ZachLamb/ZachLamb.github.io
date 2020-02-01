@@ -4,21 +4,7 @@ module.exports = {
     `gatsby-plugin-material-ui`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-github-api`,
-      options: {
-        // token: required by the GitHub API
-        token: '531685b33040fa7423f8b0fb7928db2d0ed2be6c',
-      }
-    }
+    `gatsby-plugin-react-helmet`,s
   ],
   siteMetadata: {
     title: "Zach Lamb",
