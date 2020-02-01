@@ -11,6 +11,13 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        // token: required by the GitHub API
+        token: '531685b33040fa7423f8b0fb7928db2d0ed2be6c',
+      }
     }
   ],
   siteMetadata: {
