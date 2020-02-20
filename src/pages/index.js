@@ -11,7 +11,7 @@ import "../styles/main.scss";
 import Logo from "../components/logo";
 
 export default ({ data }) => (
-  <Layout>
+  <Layout pageStyle={"home-page"}>
       <Logo></Logo>
   </Layout>
 );

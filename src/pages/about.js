@@ -53,7 +53,6 @@ export default ({ data }) => (
               developing interactive simulations for corporations on diverse
               agile teams.
             </Typography>
-            <Typography variant="h5" component="h5">
               <Typography variant="h5" component="h5">
                 “I’m a people pusher, Kady. I push people”
               </Typography>
@@ -65,7 +64,6 @@ export default ({ data }) => (
                 It taught me project management ,and that leadership is not
                 something you can educate..
               </Typography>
-            </Typography>
             <Typography variant="h5" component="h5">
               The outdoors and civic duty are my passion
             </Typography>

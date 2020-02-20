@@ -1,12 +1,14 @@
-@import './variables';
+@import "./variables";
 @import "home.scss";
 @import "menu.scss";
 @import "sidebar.scss";
+@import "contact.scss";
 @import "customGatsby.scss";
 @import "progressBar.scss";
 @import "cardLayout.scss";
 @import "skills.scss";
 @import "about.scss";
+@import "blog.scss";
 
 main {
   width: 100%;
@@ -22,11 +24,12 @@ main {
 nav {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  flex-wrap: wrap;
+    flex-basis: 100%;
   .dot {
-    opacity: 0.0;
-    height: .5rem;
-    width: .5rem;
+    opacity: 0;
+    height: 0.5rem;
+    width: 0.5rem;
     background-color: $purple-blue;
     border-radius: 50%;
     display: inline-block;
@@ -36,21 +39,22 @@ nav {
     -o-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out;
   }
-  
-  a:hover + div.dot, .active + .dot {
-    opacity: 1.0;
+
+  a:hover + div.dot,
+  .active + .dot {
+    opacity: 1;
   }
-  
+
   ul {
     display: flex;
     flex-direction: row;
     width: 100%;
-    .home a .sidebar-text span{
+    .home a .sidebar-text span {
       font-weight: 600;
       font-size: 2rem;
       color: $dark-grey;
     }
-    .home .dot{
+    .home .dot {
       display: none;
     }
   }

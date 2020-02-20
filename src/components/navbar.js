@@ -13,7 +13,6 @@ import { StaticQuery, graphql } from "gatsby";
 
 const sideMenuItems = [
   { title: "Zach Lamb", link: "/", cssName: "home" },
-  { title: "Projects", link: "/projects/" },
   { title: "About Me", link: "/about/" },
   { title: "Blog", link: "/blog/" },
   { title: "Contact", link: "/contact/" }

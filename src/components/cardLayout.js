@@ -4,7 +4,7 @@ import "../styles/main.scss";
 
 import { Card, Grid, Typography, Button } from "@material-ui/core";
 
-export default ({ children, title, description, containsBodyText, cardClass ,button,buttonLink}) => (
+export default ({ children, title, description, containsBodyText, cardClass ,buttonTitle,buttonLink}) => (
   <Card className={"content-card-layout "+ cardClass} >
     <Typography variant="h4" component="h4">
       {title}
@@ -14,11 +14,11 @@ export default ({ children, title, description, containsBodyText, cardClass ,but
     </Typography>
     {!!containsBodyText && (
       <Grid container>
-        <Typography variant="body1" component="p" className="card-content">
+        <Typography variant="body2" component="p" className="card-content">
           {children}
         </Typography>
-        {!!button && !!buttonLink &&(
-          <Button variant="outlined" className="card-button" href={buttonLink}>{button}</Button>
+        {!!buttonTitle && !!buttonLink &&(
+          <Button variant="outlined" className="card-buttonTitle" href={buttonLink}>{buttonTitle}</Button>
         )}
       </Grid>
     )}
