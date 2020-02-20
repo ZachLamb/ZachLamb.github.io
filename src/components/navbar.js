@@ -2,8 +2,7 @@ import React, { Fragment } from "react";
 
 import "../styles/main.scss";
 
-import { Grid, Paper, Typography } from "@material-ui/core";
-import Img from "gatsby-image";
+import {Grid, Paper, Typography } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";

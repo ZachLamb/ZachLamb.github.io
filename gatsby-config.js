@@ -37,6 +37,6 @@ module.exports = {
       "Zach Lamb is a Seattle based front-end dev with UX design skills, accesibility skills, UX Design skills, and occassionally dabbles in the backend",
     url: "https://www.zachlamb.io", // No trailing slash allowed!
     image: "/images/zachlamb.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@ozachlambchops",
+    twitterUsername: "@zachlambchops",
   },
 };

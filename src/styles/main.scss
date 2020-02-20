@@ -8,13 +8,18 @@
 @import "cardLayout.scss";
 @import "skills.scss";
 @import "about.scss";
+<<<<<<< HEAD
 @import "blog.scss";
+=======
+@import "mobile.scss";
+>>>>>>> af00ad53550d970843a261cd2291654baab92735
 
 main {
   width: 100%;
   padding: 3%;
 }
 
+<<<<<<< HEAD
 main {
   height: 100%;
   display: flex;
@@ -38,6 +43,25 @@ nav {
     -ms-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out;
+=======
+@media screen and (min-width: 0) and (max-width: #{$device-medium}) {
+  nav {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+}
+@media screen and (min-width: #{$device-medium}), (min-width: #{$device-large}) {
+  nav {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: $device-extra-large){
+  nav {
+      width: 10%;
+>>>>>>> af00ad53550d970843a261cd2291654baab92735
   }
 
   a:hover + div.dot,
