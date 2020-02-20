@@ -1,0 +1,23 @@
+.blog-page {
+    .search-placeholder-text {
+        padding-left: 4%;
+    }
+    div.blog-search {
+        border-radius: 24px;
+    }
+
+    div.blog-search-column {
+        min-height: 100%;
+    }
+    @media (min-width: 960px){
+        .card-container{
+            padding-left: 2%;;
+        }
+    }
+    div.blog-card {
+        border-radius: 37px;
+        h4 {
+            color: $grey-blue;
+        }
+    }
+}
