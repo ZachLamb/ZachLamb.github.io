@@ -43,7 +43,7 @@ export default ({ data }) => (
       <Paper className="contact-card">
       <form
         name="contact"
-        method="post" 
+        action="thank-you" 
         netlify-honeypot="bot-field" 
         data-netlify="true" 
         data-netlify-recaptcha="true"
