@@ -42,6 +42,7 @@ export default ({ data }) => (
       <Grid item>
       <Paper className="contact-card">
       <form
+        name="contact"
         method="post" 
         netlify-honeypot="bot-field" 
         data-netlify="true" 
