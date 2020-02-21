@@ -17,13 +17,8 @@ export default ({ children, title, description, containsBodyText, cardClass ,but
         <Typography variant="body2" component="p" className="card-content">
           {children}
         </Typography>
-<<<<<<< HEAD
         {!!buttonTitle && !!buttonLink &&(
           <Button variant="outlined" className="card-buttonTitle" href={buttonLink}>{buttonTitle}</Button>
-=======
-        {!!button && !!buttonLink &&(
-          <Button variant="outlined" className="card-button" href={buttonLink} rel="noopener">{button}</Button>
->>>>>>> af00ad53550d970843a261cd2291654baab92735
         )}
       </Grid>
     )}
