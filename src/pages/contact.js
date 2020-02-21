@@ -75,7 +75,7 @@ export default ({ data }) => (
           type="input"
           fullWidth
         />
-        <Button color="primary" type="submit" action>Send email to Zach</Button>
+        <Button color="primary" type="submit">Send email to Zach</Button>
       </form>
       </Paper>
       </Grid>
