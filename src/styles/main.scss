@@ -1,47 +1,63 @@
-@import './variables';
+@import "./variables";
 @import "home.scss";
 @import "menu.scss";
 @import "sidebar.scss";
+@import "contact.scss";
 @import "customGatsby.scss";
 @import "progressBar.scss";
 @import "cardLayout.scss";
 @import "skills.scss";
 @import "about.scss";
-@import "mobile.scss";
+@import "blog.scss";
 
-.page-container nav {
-  height: 100%;
-}
 main {
-  width: 80%;
+  width: 100%;
   padding: 3%;
 }
 
-@media screen and (min-width: 0) and (max-width: #{$device-medium}) {
-  nav {
-    display: none;
-  }
-  main {
-    width: 100%;
-  }
-}
-@media screen and (min-width: #{$device-medium}), (min-width: #{$device-large}) {
-  nav {
-    width: 20%;
-  }
-}
-
-@media screen and (min-width: $device-extra-large){
-  nav {
-      width: 10%;
-  }
-  main {
-    width: 90%;
-  }
-}
-
 main {
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    flex-basis: 100%;
+  .dot {
+    opacity: 0;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: $purple-blue;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+
+  a:hover + div.dot,
+  .active + .dot {
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .home a .sidebar-text span {
+      font-weight: 600;
+      font-size: 2rem;
+      color: $dark-grey;
+    }
+    .home .dot {
+      display: none;
+    }
+  }
 }
 
 .nav-bar-purple {

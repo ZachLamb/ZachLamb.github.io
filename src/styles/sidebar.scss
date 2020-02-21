@@ -1,3 +1,5 @@
+@import './variables';
+
 .image-avatar {
     width: 70%;
     align-self: center;
@@ -16,13 +18,11 @@
 .gatsby-image-wrapper {
     width: 100%;
 }
-nav a .sidebar-text span {
-    color: white;
-    padding-left: 0;
-}
-
-nav li:hover {
-    text-decoration: underline;
+nav a .sidebar-text{
+    padding: 0;
+    span {
+        color: $grey-blue;
+    }
 }
 nav .dev-name {
     color: white;
@@ -31,10 +31,7 @@ nav .dev-name {
     font-weight: 600;
 }
 
-.sidebar li {
-    padding-left: 0;
-}
-
-.sidebar .sidebar-list {
-    padding-top: 3%;
+nav li#nav-item {
+    justify-content: center;
+    flex-direction: column;
 }

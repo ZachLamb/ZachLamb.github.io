@@ -1,7 +1,12 @@
 
 
-.aboutPage h1 {
-    color: $purple-blue;
+.about-page .about-container {
+    justify-content: space-evenly;
+    h5 {
+        color: $purple-blue;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
 }
 
 .aboutCard {

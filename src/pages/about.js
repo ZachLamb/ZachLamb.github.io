@@ -4,65 +4,79 @@ import CardLayout from "../components/cardLayout";
 import Layout from "../components/mainLayout";
 import Grow from "@material-ui/core/Grow";
 import { Grid, Card, Typography, Paper, Button } from "@material-ui/core";
+
+import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import "../styles/main.scss";
-import RadarReactChart from "../components/RadarReactChart";
-
 export default ({ data }) => (
-  <Layout pageStyle={"aboutPage"}>
-    <Grid container className="page-container elevator-cards">
-      <Grid container direction="row" alignContent="center" className="aboutTitle">
-        <Typography variant="h1" component="h1">
-        Hi, I'm Zach
-        </Typography>
-      </Grid>
-      <Grid container direction="row" spacing={40} justify="center">
-        <Grow in timeout={2000}>
-          <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
-            <CardLayout
-              title={"An engineer who loves UX"}
-              containsBodyText={true}
-              cardClass={"aboutCard"}
-              button={"Add me on LinkedIn"}
-              buttonLink={"https://www.linkedin.com/in/lambzachary/"}
-            >
-             I love people, tech, dogs, and the outdoors in that order. I have been developing web apps for the past two years and a half years. I love having 
-             I'm a proud alumn of CU Boulder. In school, I helped organize a hackathon called T9 Hacks ,and I was president of a student organization while I was there.
-            </CardLayout>
-          </Grid>
-        </Grow>
-        <Grid item xl={6} lg={6} md={6} className="about-chart">
-          <RadarReactChart></RadarReactChart>
-        </Grid>
-      </Grid>
-    </Grid>
-  </Layout>
-);
-
-export const aboutImage = graphql`
-  fragment aboutImage on File {
-    childImageSharp {
-      fluid(maxWidth: 500, maxHeight: 500) {
-        ...GatsbyImageSharpFluid
+  <StaticQuery
+    query={graphql`
+      query {
+        file(relativePath: { eq: "zachlamb.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
-    }
-  }
-`;
-
-export const pageQuery = graphql`
-  query {
-    loveDogs: file(relativePath: { eq: "loveDogs.jpeg" }) {
-      ...aboutImage
-    }
-    glacier: file(relativePath: { eq: "glacier.jpg" }) {
-      ...aboutImage
-    }
-    ourayBeer: file(relativePath: { eq: "ourayBeer.jpeg" }) {
-      ...aboutImage
-    }
-    telluride: file(relativePath: { eq: "telluride.jpg" }) {
-      ...aboutImage
-    }
-  }
-`;
+    `}
+    render={data => (
+      <Layout pageStyle={"about-page"}>
+        <Grid
+          container
+          direction="row"
+          spacing={32}
+          className="about-container"
+        >
+          <Grid
+            item
+            xl={3}
+            lg={3}
+            md={3}
+            sm={12}
+            xs={12}
+            className="image-avatar"
+          >
+            <Img
+              fluid={data.file.childImageSharp.fluid}
+              alt={"Picture of Zach Lamb"}
+            />
+          </Grid>
+          <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+            <Typography variant="h5" component="h5">
+              An engineer with a soft spot for UX
+            </Typography>
+            <Typography variant="body1" component="p">
+              I am a front-end dev who pulls from a UX background to create data
+              driven and useful UIs. I currently work in the education field,
+              developing interactive simulations for corporations on diverse
+              agile teams.
+            </Typography>
+              <Typography variant="h5" component="h5">
+                “I’m a people pusher, Kady. I push people”
+              </Typography>
+              <Typography variant="body1" component="p">
+                In 2016, my favorite student group was falling apart ,so I
+                decided to run to be its president. I had the task of rebuilding
+                an LGBTQ student group from the ground up. With 4 members, I was
+                able to raise our membership 50 students on average showing up.
+                It taught me project management ,and that leadership is not
+                something you can educate..
+              </Typography>
+            <Typography variant="h5" component="h5">
+              The outdoors and civic duty are my passion
+            </Typography>
+            <Typography variant="body1" component="p">
+              I grew up exploring the Rocky Mountains and learning how to be a
+              steward for the environment. In my free time, I love working on
+              tech projects that have anything to do with the outdoors. I love
+              volunteering too. I have helped organize hackathons in the past ,
+              and I am actively involved with Code For America.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Layout>
+    )}
+  />
+);
