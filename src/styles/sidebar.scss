@@ -18,21 +18,11 @@
 .gatsby-image-wrapper {
     width: 100%;
 }
-<<<<<<< HEAD
 nav a .sidebar-text{
     padding: 0;
     span {
         color: $grey-blue;
     }
-=======
-nav a .sidebar-text span {
-    color: white;
-    padding-left: 0;
-}
-
-nav li:hover {
-    text-decoration: underline;
->>>>>>> af00ad53550d970843a261cd2291654baab92735
 }
 nav .dev-name {
     color: white;
@@ -41,16 +31,7 @@ nav .dev-name {
     font-weight: 600;
 }
 
-<<<<<<< HEAD
 nav li#nav-item {
     justify-content: center;
     flex-direction: column;
-=======
-.sidebar li {
-    padding-left: 0;
-}
-
-.sidebar .sidebar-list {
-    padding-top: 3%;
->>>>>>> af00ad53550d970843a261cd2291654baab92735
 }
