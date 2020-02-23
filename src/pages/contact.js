@@ -60,9 +60,9 @@ export default function Contact({ data }) {
       <form
         name="contact"
         action="/thanks/" 
-        netlify-honeypot="bot-field" 
-        data-netlify="true" 
-        data-netlify-recaptcha="true"
+        method="post"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
         onSubmit={handleSubmit}
         >
         <input type="hidden" name="bot-field" />
