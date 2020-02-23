@@ -20,29 +20,7 @@ function encode(data) {
     .join('&')
 }
 
-export default function Contact({ data }) {
-  const [state, setState] = React.useState({})
-
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
-
-  return (
+export default ({ data }) => (
   <Layout pageStyle={"contact-page"}>
     <Grid container direction="column" alignItems="flex-start" justify="space-between">
       <Grid item>
@@ -63,9 +41,9 @@ export default function Contact({ data }) {
         netlify-honeypot="bot-field" 
         data-netlify="true" 
         data-netlify-recaptcha="true"
-        onSubmit={handleSubmit}
         >
-        <input type="hidden" name="bot-field" />
+         <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <TextField
           id="outlined-secondary"
           label="Email"
@@ -73,7 +51,6 @@ export default function Contact({ data }) {
           color="secondary"
           name="email"
           type="input"
-          onChange={handleChange}
         />
         <TextField
           id="outlined-secondary"
@@ -82,7 +59,6 @@ export default function Contact({ data }) {
           color="secondary"
           name="name"
           type="input"
-          onChange={handleChange}
         />
         <TextField
           id="outlined-secondary"
@@ -92,12 +68,11 @@ export default function Contact({ data }) {
           name="message"
           type="input"
           fullWidth
-          onChange={handleChange}
         />
-        <Button color="primary" type="submit">Send email to Zach</Button>
+        <Button color="primary" type="submit" value="Send Message">Send email to Zach</Button>
       </form>
       </Paper>
       </Grid>
     </Grid>
   </Layout>
-)};
+);
