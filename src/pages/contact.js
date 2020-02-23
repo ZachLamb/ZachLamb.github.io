@@ -1,6 +1,18 @@
-import React from 'react'
+import React from "react";
 import { navigate } from 'gatsby-link'
+
 import Layout from "../components/mainLayout";
+
+import {
+  Grid,
+  IconButton,
+  Paper,
+  TextField,
+  Button,
+} from "@material-ui/core";
+import { FaLinkedinIn,FaGithub,FaDev, } from 'react-icons/fa';
+
+import "../styles/main.scss";
 
 function encode(data) {
   return Object.keys(data)
@@ -8,7 +20,7 @@ function encode(data) {
     .join('&')
 }
 
-export default function Contact() {
+export default function Contact({ data }) {
   const [state, setState] = React.useState({})
 
   const handleChange = (e) => {
@@ -31,48 +43,62 @@ export default function Contact() {
   }
 
   return (
-    <Layout>
-      <h1>Contact</h1>
+  <Layout pageStyle={"contact-page"}>
+    <Grid container direction="column" alignItems="flex-start" justify="space-between">
+      <Grid item>
+        <h2>Contact Me</h2>
+        <h5>Connect with me on social media or send me your contact info</h5>
+        <Grid container className="social-media">
+         <IconButton ><a href="https://www.linkedin.com/in/lambzachary/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></a></IconButton>
+         <IconButton ><a href="https://github.com/ZachLamb" target="_blank" rel="noopener noreferrer"><FaGithub/></a></IconButton>
+         <IconButton ><a href="https://dev.to/zachlamb" target="_blank" rel="noopener noreferrer"><FaDev/></a></IconButton>
+         
+        </Grid>
+      </Grid>
+      <Grid item>
+      <Paper className="contact-card">
       <form
         name="contact"
+        action="/thanks/" 
         method="post"
-        action="/thanks/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
+        data-netlify="true" 
+        data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        >
+        <input type="hidden" name="bot-field" />
+        <TextField
+          id="outlined-secondary"
+          label="Email"
+          variant="outlined"
+          color="secondary"
+          name="email"
+          type="input"
+          onChange={handleChange}
+        />
+        <TextField
+          id="outlined-secondary"
+          label="Name"
+          variant="outlined"
+          color="secondary"
+          name="name"
+          type="input"
+          onChange={handleChange}
+        />
+        <TextField
+          id="outlined-secondary"
+          label="Message"
+          variant="outlined"
+          color="secondary"
+          name="message"
+          type="input"
+          fullWidth
+          onChange={handleChange}
+        />
+        <Button color="primary" type="submit">Send email to Zach</Button>
       </form>
-    </Layout>
-  )
-}
+      </Paper>
+      </Grid>
+    </Grid>
+  </Layout>
+)};
