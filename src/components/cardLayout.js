@@ -6,6 +6,7 @@ import { Card, Grid, Typography, Button } from "@material-ui/core";
 
 export default ({ children, title, description, containsBodyText, cardClass ,buttonTitle,buttonLink}) => (
   <Card className={"content-card-layout "+ cardClass} >
+    <Typography component="article">
     <Typography variant="h4" component="h4">
       {title}
     </Typography>
@@ -23,5 +24,6 @@ export default ({ children, title, description, containsBodyText, cardClass ,but
       </Grid>
     )}
     {!containsBodyText && <div className="card-content">{children}</div>}
+    </Typography>
   </Card>
 );

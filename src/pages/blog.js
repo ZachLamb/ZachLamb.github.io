@@ -17,6 +17,7 @@ import {
 import SearchIcon from "@material-ui/icons/Search";
 
 import "../styles/main.scss";
+import BlogPosts from "../components/blogPost";
 
 export default ({ data }) => (
   <Layout pageStyle={"blog-page"}>
@@ -37,16 +38,7 @@ export default ({ data }) => (
         </Paper>
       </Grid>
       <Grid item xl={8} lg={8} md={8} sm={12} xs={12} className="card-container">
-        <CardLayout cardClass="blog-card" title={"My Awesome Title"}>
-          A blog post about hiking, dogs, food, tech, ect Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </CardLayout>
+        <BlogPosts></BlogPosts>
       </Grid>
     </Grid>
   </Layout>
