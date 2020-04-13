@@ -18,6 +18,12 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: "gatsby-source-dev",
+      options: {
+        username: 'zachlamb'
+      }
+    }
   ],
   siteMetadata: {
     title: "Zach Lamb",

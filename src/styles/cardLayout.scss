@@ -1,7 +1,8 @@
-.card-content {
+p.card-content {
     padding-top: 5%;
     display: flex;
+    -webkit-line-clamp: 4;
 }
 .content-card-layout {
-    padding: 5%;
+    padding: 2%;
 }
