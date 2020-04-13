@@ -21,8 +21,8 @@ import BlogPosts from "../components/blogPost";
 
 export default ({ data }) => (
   <Layout pageStyle={"blog-page"}>
-    <Grid container direction="column">
-      <Grid item xl={4} lg={4} md={4} className="blog-search-column">
+    <Grid container direction="column" display={{ sm: "none", lg: "none" }}>
+      <Grid item xl={4} lg={4} className="blog-search-column">
         <Paper elevation={1} className="blog-search">
           <Grid container justify="space-between">
             <InputBase
@@ -37,7 +37,7 @@ export default ({ data }) => (
           </Grid>
         </Paper>
       </Grid>
-      <Grid item xl={8} lg={8} md={8} sm={12} xs={12} className="card-container">
+      <Grid item xl={8} lg={8} md={8} sm={8} xs={8} className="card-container">
         <BlogPosts></BlogPosts>
       </Grid>
     </Grid>
