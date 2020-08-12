@@ -44,7 +44,7 @@ export default function Contact({ data }) {
 
   return (
   <Layout pageStyle={"contact-page"}>
-    <Grid container direction="column" alignItems="flex-start" justify="space-between">
+    <Grid container direction="column" alignItems="flex-start" justify="space-between" className="container-contact">
       <Grid item>
         <h2>Contact Me</h2>
         <h5>Connect with me on social media or send me your contact info</h5>
