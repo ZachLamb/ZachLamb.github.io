@@ -21,7 +21,7 @@ export default ({ data }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Layout pageStyle={"about-page"}>
         <Grid
           container
@@ -48,22 +48,21 @@ export default ({ data }) => (
               An engineer with a soft spot for UX
             </Typography>
             <Typography variant="body1" component="p">
-              I am a front-end dev who pulls from a UX background to create data
-              driven and useful UIs. I currently work in the education field,
-              developing interactive simulations for corporations on diverse
-              agile teams.
+              I am a driven front-end developer with extensive UX experience. I
+              constantly leverage my UX background to create data-driven and
+              engaging UIs. While working on enterprise-level software, I am
+              constantly honing my HTML, CSS, and Javascript skills. Using
+              cutting edge frameworks libraries, like React, is something I’m
+              passionate about. 
             </Typography>
-              <Typography variant="h5" component="h5">
-                “I’m a people pusher, Kady. I push people”
-              </Typography>
-              <Typography variant="body1" component="p">
-                In 2016, my favorite student group was falling apart ,so I
-                decided to run to be its president. I had the task of rebuilding
-                an LGBTQ student group from the ground up. With 4 members, I was
-                able to raise our membership 50 students on average showing up.
-                It taught me project management ,and that leadership is not
-                something you can educate..
-              </Typography>
+            <Typography variant="h5" component="h5">
+              Swipes Right on Agile
+            </Typography>
+            <Typography variant="body1" component="p">
+              I joined my last company as a jr. developer. I struggled to keep up with client's ever changing demands and communication in my team. 
+              As I have learned more about the Agile method along with my teammates, we have been empowered to adapt to those needs. Those hard lessons 
+              have shown how important each Agile principle is. Through this, I have grown to become the Scrum Master and Agile Coach on my project teams.
+            </Typography>
             <Typography variant="h5" component="h5">
               The outdoors and civic duty are my passion
             </Typography>
