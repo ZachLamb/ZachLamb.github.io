@@ -13,6 +13,7 @@ const usePosts = () => {
               published_at(formatString: "MM-DD-YYYY")
               description
               body_markdown
+              cover_image
             }
           }
         }
@@ -26,6 +27,7 @@ const usePosts = () => {
         date: post.node.article.published_at,
         desc: post.node.article.description,
         body: post.node.article.body_markdown,
+        image: post.node.article.cover_image
     }))
 }
 
