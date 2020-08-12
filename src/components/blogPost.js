@@ -12,6 +12,7 @@ const BlogPosts = () => {
       {posts.map((post) => (
         <CardLayout
           cardClass="blog-card"
+          imageURL={post.image}
           key={post.id}
           title={post.title}
           buttonTitle="Link to post"
