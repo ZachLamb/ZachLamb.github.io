@@ -53,7 +53,7 @@ export default ({ data }) => (
               engaging UIs. While working on enterprise-level software, I am
               constantly honing my HTML, CSS, and Javascript skills. Using
               cutting edge frameworks libraries, like React, is something I’m
-              passionate about. 
+              passionate about. I hope to become certified in AWS in the next year.
             </Typography>
             <Typography variant="h5" component="h5">
               Swipes Right on Agile
@@ -61,7 +61,7 @@ export default ({ data }) => (
             <Typography variant="body1" component="p">
               I joined my last company as a jr. developer. I struggled to keep up with client's ever changing demands and communication in my team. 
               As I have learned more about the Agile method along with my teammates, we have been empowered to adapt to those needs. Those hard lessons 
-              have shown how important each Agile principle is. Through this, I have grown to become the Scrum Master and Agile Coach on my project teams.
+              have shown how important each Agile principle is. After getting coached, myself, I have been jumping into this role in hopes of being a certified Agile Coach and Scrum Master someday.
             </Typography>
             <Typography variant="h5" component="h5">
               The outdoors and civic duty are my passion
