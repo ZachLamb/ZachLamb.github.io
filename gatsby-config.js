@@ -1,37 +1,64 @@
 module.exports = {
+  siteMetadata: {
+    title: `Zach Lamb`,
+    description: `Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.`,
+    author: `Starter tempate originally made by Saimir Kapaj and heavily customized by Zach.`
+  },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-material-ui`,
-    `gatsby-transformer-sharp`, 
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/assets/images`
+      }
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        name: `content`,
+        path: `${__dirname}/src/data`
+      }
     },
     {
-      resolve: "gatsby-source-dev",
+      resolve: 'gatsby-transformer-remark',
       options: {
-        username: 'zachlamb'
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-personal-website-starter`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#81e6d9`,
+        theme_color: `#81e6d9`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/gatsby-icon.png`
+      }
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-tailwindcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/assets/styles/global.css`]
       }
     }
-  ],
-  siteMetadata: {
-    title: "Zach Lamb",
-    titleTemplate: "%s · Front-End Dev and user advocate",
-    description:
-      "Zach Lamb is a Seattle based front-end dev with UX design skills, accesibility skills, UX Design skills, and occassionally dabbles in the backend",
-    url: "https://www.zachlamb.io", // No trailing slash allowed!
-    image: "/images/zachlamb.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@zachlambchops",
-  },
+  ]
 };
