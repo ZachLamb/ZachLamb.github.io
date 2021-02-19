@@ -40,7 +40,7 @@ const Newsletter: React.FC = () => {
         <Styled.Form netlify-honeypot="bot-field" data-netlify="true">
           <Styled.Input type="name" placeholder={newsletter.namePlaceholder} />
           <Styled.Input type="email" placeholder={newsletter.emailPlaceholder} />
-          <Styled.Input type="body" size="50" placeholder={newsletter.bodyPlaceholder} />
+          <Styled.Input type="message" size="50" placeholder={newsletter.bodyPlaceholder} />
           <Button primary block >
             {newsletter.submitPlaceholder}
           </Button>
